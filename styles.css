@@ -1,0 +1,242 @@
+:root {
+    --primary-color: #ff6b9d;
+    --secondary-color: #ffb6c1;
+    --accent-color: #ff4081;
+    --light-color: #fff8fa;
+    --dark-color: #4a4a4a;
+}
+
+body {
+    background-color: var(--light-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark-color);
+}
+
+.form-container {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(255, 107, 157, 0.2);
+    padding: 30px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.form-header h1 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.form-header p {
+    color: var(--dark-color);
+    opacity: 0.7;
+}
+
+.form-control {
+    border-radius: 15px;
+    border: 2px solid #f0f0f0;
+    padding: 12px 15px;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+}
+
+.form-label {
+    font-weight: 600;
+    color: var(--dark-color);
+    margin-bottom: 8px;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 15px;
+    padding: 12px 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    box-shadow: 0 5px 15px rgba(255, 64, 129, 0.3);
+}
+
+.form-section {
+    background-color: #fff8fa;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-left: 5px solid var(--secondary-color);
+}
+
+.form-section-title {
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.form-section-title i {
+    margin-right: 10px;
+}
+
+.required-field::after {
+    content: "*";
+    color: var(--accent-color);
+    margin-left: 4px;
+}
+
+.form-text {
+    color: #6c757d;
+    font-size: 0.85rem;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 20px;
+    color: #6c757d;
+}
+
+.photo-upload {
+    border: 2px dashed var(--secondary-color);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.photo-upload:hover {
+    border-color: var(--primary-color);
+    background-color: rgba(255, 182, 193, 0.1);
+}
+
+.photo-upload i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.custom-select {
+    border-radius: 15px;
+    border: 2px solid #f0f0f0;
+    padding: 12px 15px;
+}
+
+.progress-container {
+    margin-bottom: 30px;
+}
+
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #f0f0f0;
+}
+
+.progress-bar {
+    background-color: var(--primary-color);
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.step {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.step.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.form-section {
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* Add some hover effects to inputs */
+.form-control:hover {
+    border-color: var(--secondary-color);
+}
+
+/* Custom checkbox styling */
+.form-check-input {
+    width: 1.2em;
+    height: 1.2em;
+    margin-top: 0.15em;
+    background-color: #fff;
+    border: 2px solid var(--secondary-color);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 107, 157, 0.25);
+    border-color: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .step {
+        font-size: 0.7rem;
+    }
+}
+
+/* Success message styling */
+.success-message {
+    background-color: #e8f5e9;
+    border-left: 5px solid #4caf50;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.success-message i {
+    color: #4caf50;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* Error message styling */
+.error-message {
+    background-color: #ffebee;
+    border-left: 5px solid #f44336;
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    display: none;
+}
+
+.error-message i {
+    color: #f44336;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
